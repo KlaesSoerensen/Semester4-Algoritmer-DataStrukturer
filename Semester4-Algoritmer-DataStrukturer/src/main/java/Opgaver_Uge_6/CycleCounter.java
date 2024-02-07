@@ -16,32 +16,29 @@ public class CycleCounter {
         }
 
         for (int i = 0; i < arrayCopy.size(); i++) {
-            // If multi cycle
-            if (arrayCopy.get(i) != i && arrayCopy.get(i) != null) {
+            if (arrayCopy.get(i) != null) {
                 int cycleSize = 1;
-                int cycleStartIndex = i;
-                int nextIndex = arrayCopy.get(arrayCopy.get(i) - 1);
+                int nextIndex = arrayCopy.get(i) - 1;
 
-                while (arrayCopy.get(nextIndex - 1) != arrayCopy.get(cycleStartIndex)) {
+                // Mark the current element as visited
+                arrayCopy.set(i, null);
+
+                while (nextIndex != i) {
                     cycleSize++;
-                    int indexValue = nextIndex;
-                    nextIndex = arrayCopy.get(nextIndex - 1);
-                    arrayCopy.set(indexValue - 1, null);
+                    int temp = arrayCopy.get(nextIndex) - 1;
+                    // Mark the current element as visited
+                    arrayCopy.set(nextIndex, null);
+                    nextIndex = temp;
                 }
 
                 // Add to cycles
                 cycles[cycleSize - 1]++;
-            } else {
-                // If singular cycle
-                arrayCopy.set(i, null);
-
-                // Add to cycles
-                cycles[0]++;
             }
         }
 
         return cycles;
     }
+
 
     public String printResults(Integer[] array) {
         String toPrint = "";
@@ -54,7 +51,7 @@ public class CycleCounter {
     }
 
     public void classDemonstration() {
-        PermutationGenerator permutationGenerator = new PermutationGenerator(3);
+        PermutationGenerator permutationGenerator = new PermutationGenerator(10);
         ArrayList<Integer> permutation = permutationGenerator.generateShuffledPermutation();
         System.out.println(permutation.toString());
 
