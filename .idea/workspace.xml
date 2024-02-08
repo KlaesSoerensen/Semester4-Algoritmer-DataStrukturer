@@ -28,17 +28,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Klaes/OneDrive/Skrivebord/Repositories/Semester4-Algoritmer-DataStrukturer",
+    "last_opened_file_path": "C:/Users/Klaes/OneDrive/Skrivebord/Repositories/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer/src/main/java/Execution",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,6 +48,13 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Klaes\OneDrive\Skrivebord\Repositories\Semester4-Algoritmer-DataStrukturer\src" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,6 +69,7 @@
       <workItem from="1707377314403" duration="23000" />
       <workItem from="1707377358513" duration="18000" />
       <workItem from="1707377420005" duration="123000" />
+      <workItem from="1707377587923" duration="237000" />
     </task>
     <servers />
   </component>
