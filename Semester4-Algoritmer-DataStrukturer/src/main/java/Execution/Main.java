@@ -15,6 +15,7 @@ public class Main {
         System.out.println("\nCycle Counter: ");
         CycleCounter cycleCounter = new CycleCounter();
         cycleCounter.classDemonstration();
+        cycleCounter.EB2(10000000, 16);
 
     }
 }
