@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Semester4-Algoritmer-DataStrukturer/src/main/java/Execution/Execution.iml" filepath="$PROJECT_DIR$/Semester4-Algoritmer-DataStrukturer/src/main/java/Execution/Execution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Semester4-Algoritmer-DataStrukturer/src/main/java/Opgaver_Uge_6/Opgaver_Uge_6.iml" filepath="$PROJECT_DIR$/Semester4-Algoritmer-DataStrukturer/src/main/java/Opgaver_Uge_6/Opgaver_Uge_6.iml" />
+    </modules>
+  </component>
+</project>
