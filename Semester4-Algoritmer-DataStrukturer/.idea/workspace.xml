@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="" />
+    <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Contracts/Sorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Execution/Values.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/6/9/69cdb079609ed3ce1e356d44cff508330a5787c4" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/6/9/69cdb079609ed3ce1e356d44cff508330a5787c4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/7/2/72c31fb70e78a12c77e079254de34c3e8029c73c" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/7/2/72c31fb70e78a12c77e079254de34c3e8029c73c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0fa73387ffba1eeb37cf56b6ebf36db75b966232" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0fa73387ffba1eeb37cf56b6ebf36db75b966232" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b3dbcbe8b2d91c6f00355ed21ab5beb9a183555" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b3dbcbe8b2d91c6f00355ed21ab5beb9a183555" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36d243d8984de22645b2311a673d89f45126e99b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36d243d8984de22645b2311a673d89f45126e99b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Execution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Execution/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_6/CycleCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_6/CycleCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Execution/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Execution/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Opgaver_Uge_6/CycleCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Opgaver_Uge_6/CycleCounter.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -34,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Klaes/OneDrive/Før Oprettelse af OneDrive/Dokumenter/School/Semester_5/Cloud Computing/Repositories/cloud-bite-frontend",
+    "last_opened_file_path": "C:/Users/Klaes/OneDrive/Skrivebord/Repositories/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +71,26 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Execution.Main" />
+      <module name="Semester4-Algoritmer-DataStrukturer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Execution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -65,21 +109,11 @@
       <updated>1707233146997</updated>
       <workItem from="1707233148295" duration="105000" />
       <workItem from="1707233264232" duration="13229000" />
+      <workItem from="1707818363184" duration="3306000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Opgaver_Uge_6/PermutationGenerator.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

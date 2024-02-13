@@ -41,11 +41,11 @@ public class CycleCounter {
     }
 
 
-    public String printResults(Integer[] array) {
+    public String printResults(Double[] array) {
         String toPrint = "";
 
         for (int i = 0; i < array.length; i++) {
-            toPrint = toPrint + "Cycles of " + (i + 1) + ": " + array[i] + ".\n";
+            toPrint = toPrint + "Cycles of " + (i + 1) + ": " + (Math.round(array[i] * 100) / 100.0) + "\n";
         }
 
         return toPrint;
@@ -58,7 +58,7 @@ public class CycleCounter {
 
         CycleCounter cycleCounter = new CycleCounter();
 
-        System.out.println(cycleCounter.printResults(cycleCounter.countCycles(permutation)));
+        System.out.println(cycleCounter.printResults(castIntegerArrayToDoubleArray(cycleCounter.countCycles(permutation))));
     }
 
     public void EB2(int numberOfArrays, int lengthOfArrays) {
@@ -82,8 +82,8 @@ public class CycleCounter {
             numberOfArraysLeft--;
         }
 
-        System.out.println(printResults(cyclesOfLenghtX));
-        System.out.println(printResults(cyclesPerPermutation));
+        // System.out.println(printResults(castIntegerArrayToDoubleArray(cyclesOfLenghtX)));
+        System.out.println(printResults(castIntegerArrayToDoubleArray(cyclesPerPermutation)));
         System.out.println(printResults(calculatePercent(numberOfArrays, cyclesPerPermutation)));
 
     }
@@ -125,13 +125,23 @@ public class CycleCounter {
         outputArray[totalCycles - 1]++;
     }
 
-    private Integer[] calculatePercent(double total, Integer[] array) {
-        Integer[] percentArray = new Integer[array.length];
+    private Double[] calculatePercent(double total, Integer[] array) {
+        Double[] percentArray = new Double[array.length];
 
         for (int i = 0; i < array.length; i++) {
-            percentArray[i] = (int) ((double) array[i] / total * 100.0);
+            percentArray[i] = ((double) array[i] / total * 100.0);
         }
 
         return percentArray;
+    }
+
+    private Double[] castIntegerArrayToDoubleArray(Integer[] array) {
+        Double[] result = new Double[array.length];
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = array[i].doubleValue();
+        }
+
+        return result;
     }
 }

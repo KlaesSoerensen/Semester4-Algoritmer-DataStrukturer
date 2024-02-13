@@ -1,10 +1,10 @@
 
 v
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜äàç8şµû×1
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜äàç8Şå«Ú1
 ’
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Å½ĞÇüÿÿÿÿ8”şµû×1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Å½ĞÇüÿÿÿÿ8ßå«Ú1
 ’
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Êòœøÿÿÿÿ8”şµû×1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÕÛŞ8•şµû×1
-L	java:S106+"+Replace this use of System.out by a logger.(Â•ù¶ûÿÿÿÿ8¹şµû×1
-G	java:S106,"+Replace this use of System.out by a logger.(åëóã8ºşµû×1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Êòœøÿÿÿÿ8àå«Ú1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÕÛŞ8áå«Ú1
+L	java:S106+"+Replace this use of System.out by a logger.(Â•ù¶ûÿÿÿÿ8÷å«Ú1
+G	java:S106,"+Replace this use of System.out by a logger.(åëóã8ùå«Ú1

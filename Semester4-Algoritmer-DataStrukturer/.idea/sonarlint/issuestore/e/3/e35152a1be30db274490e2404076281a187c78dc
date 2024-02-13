@@ -1,0 +1,6 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ªõˆÃûÿÿÿÿ8Â±ÙÚ1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ºÊ‡8Æ±ÙÚ1
+:
+java:S1118"Hide this public constructor.(ºÊ‡8àÜÚ1
