@@ -1,11 +1,12 @@
 package Opgaver_Uge_7;
 
+import Contracts.Sorting;
 import Opgaver_Uge_6.PermutationGenerator;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class InsertionSort {
+public class InsertionSort implements Sorting {
     public InsertionSort() {
 
     }
@@ -29,5 +30,10 @@ public class InsertionSort {
         ArrayList<Integer> array = permutationGenerator.generateShuffledPermutation();
 
         System.out.println(sort(array).toString());
+    }
+
+    @Override
+    public String calculateTime(int arrayLength) {
+        return null;
     }
 }
