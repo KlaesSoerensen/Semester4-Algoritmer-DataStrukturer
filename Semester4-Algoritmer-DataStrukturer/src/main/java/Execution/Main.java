@@ -1,11 +1,15 @@
 package Execution;
 
+import Contracts.Sorting;
 import Opgaver_Uge_6.CycleCounter;
 import Opgaver_Uge_6.PermutationGenerator;
+import Opgaver_Uge_7.BinarySearch;
 import Opgaver_Uge_7.InsertionSort;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -49,6 +53,26 @@ public class Main {
         ArrayList<Integer> arrayList = p.generateShuffledPermutation();
         InsertionSort insertionSort = new InsertionSort();
         System.out.println(Arrays.toString(arrayList.toArray()) + "\n" +
-                Arrays.toString(insertionSort.sort(arrayList).toArray()) + arrayList.size());
+                Arrays.toString(insertionSort.sort(arrayList).toArray()));
+
+        IB(insertionSort, p);
+
+        System.out.println("\nII.B - 1: ");
+        BinarySearch binarySearch = new BinarySearch();
+        p.setLength(Sorting.TESTING_ARRAY_LENGTH);
+        System.out.println(binarySearch.binarySearch(p.generatePermutation(), (int)(Math.random() * Sorting.TESTING_ARRAY_LENGTH)));
+    }
+
+    public static void IB(InsertionSort insertionSort, PermutationGenerator p) {
+        System.out.println("\nI.B: ");
+        p.setLength(100000);
+        ArrayList<Integer> bestCase = p.generatePermutation();
+        ArrayList<Integer> randomCase = p.generateShuffledPermutation();
+        ArrayList<Integer> worstCase = p.generatePermutation();
+
+        worstCase.sort(Collections.reverseOrder());
+        System.out.println(insertionSort.calculateTime(bestCase, "Best Case", 100000));
+        System.out.println(insertionSort.calculateTime(randomCase, "Random Case", 100000));
+        System.out.println(insertionSort.calculateTime(worstCase, "Worst case", 100000));
     }
 }

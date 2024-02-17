@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import static java.util.Collections.shuffle;
 
 public class PermutationGenerator {
-    private int length;
+    private long length;
 
     public PermutationGenerator(int length) {
         this.length = length + 1;
@@ -31,11 +31,11 @@ public class PermutationGenerator {
         return shuffledPermutation;
     }
 
-    public int getLength() {
+    public long getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(long length) {
         this.length = length;
     }
 
