@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MergeSort/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Execution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Execution/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MergeSort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MergeSort/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Execution/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Execution/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,7 @@
       <workItem from="1707990831360" duration="2811000" />
       <workItem from="1708168176653" duration="10414000" />
       <workItem from="1708420763353" duration="4035000" />
-      <workItem from="1708587615720" duration="1828000" />
+      <workItem from="1708587615720" duration="6458000" />
     </task>
     <servers />
   </component>
