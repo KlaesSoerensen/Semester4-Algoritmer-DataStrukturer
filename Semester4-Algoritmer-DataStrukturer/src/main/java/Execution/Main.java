@@ -5,12 +5,14 @@ import Opgaver_Uge_6.CycleCounter;
 import Opgaver_Uge_6.PermutationGenerator;
 import Opgaver_Uge_7.BinarySearch;
 import Opgaver_Uge_7.InsertionSort;
+import MergeSort.MergeSort;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
+
+import static java.lang.String.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +20,7 @@ public class Main {
 
         opgaverUge7();
 
+        mergeSort();
 
     }
 
@@ -35,7 +38,7 @@ public class Main {
         long timeStart = System.currentTimeMillis();
         cycleCounter.EB2(1000000, 16);
         long totalTime = System.currentTimeMillis() - timeStart;
-        String toPrint = String.format("%02d min, %02d sec",
+        String toPrint = format("%02d min, %02d sec",
                 TimeUnit.MILLISECONDS.toMinutes(totalTime),
                 TimeUnit.MILLISECONDS.toSeconds(totalTime) -
                         TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(totalTime))
@@ -74,5 +77,16 @@ public class Main {
         System.out.println(insertionSort.calculateTime(bestCase, "Best Case", 100000));
         System.out.println(insertionSort.calculateTime(randomCase, "Random Case", 100000));
         System.out.println(insertionSort.calculateTime(worstCase, "Worst case", 100000));
+    }
+
+    public static void mergeSort() {
+        System.out.println("\nMerge Sort:");
+        PermutationGenerator p = new PermutationGenerator(10);
+        ArrayList<Integer> permutation = p.generateShuffledPermutation();
+
+        System.out.println(Arrays.toString(permutation.toArray()));
+
+        MergeSort mergeSort = new MergeSort();
+        Arrays.toString(mergeSort.sort(permutation).toArray());
     }
 }
