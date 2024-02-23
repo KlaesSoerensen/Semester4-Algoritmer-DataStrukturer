@@ -5,7 +5,7 @@ import Opgaver_Uge_6.CycleCounter;
 import Opgaver_Uge_6.PermutationGenerator;
 import Opgaver_Uge_7.BinarySearch;
 import Opgaver_Uge_7.InsertionSort;
-import MergeSort.MergeSort;
+import Opgaver_Uge_8.MergeSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -87,6 +87,6 @@ public class Main {
         System.out.println(Arrays.toString(permutation.toArray()));
 
         MergeSort mergeSort = new MergeSort();
-        Arrays.toString(mergeSort.sort(permutation).toArray());
+        Arrays.toString(mergeSort.bottomUpMergeSort(permutation).toArray());
     }
 }
