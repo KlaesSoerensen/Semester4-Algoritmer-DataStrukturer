@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExamTools/AlgorithmComparison.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +92,7 @@
       <workItem from="1709035840531" duration="2433000" />
       <workItem from="1709110699871" duration="844000" />
       <workItem from="1709132251257" duration="605000" />
-      <workItem from="1709132900060" duration="2347000" />
+      <workItem from="1709132900060" duration="2415000" />
     </task>
     <servers />
   </component>
