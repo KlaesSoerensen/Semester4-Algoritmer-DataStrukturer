@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_9/QuickSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Contracts/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Contracts/Sorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Execution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Execution/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Execution/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Execution/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Opgaver-Uge-9",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Github/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer",
@@ -98,6 +98,7 @@
       <workItem from="1709035840531" duration="2433000" />
       <workItem from="1709110699871" duration="844000" />
       <workItem from="1709132251257" duration="605000" />
+      <workItem from="1709132900060" duration="1161000" />
     </task>
     <servers />
   </component>

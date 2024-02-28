@@ -6,6 +6,7 @@ import Opgaver_Uge_6.PermutationGenerator;
 import Opgaver_Uge_7.BinarySearch;
 import Opgaver_Uge_7.InsertionSort;
 import Opgaver_Uge_8.MergeSort;
+import Opgaver_Uge_9.QuickSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +23,7 @@ public class Main {
 
         opgaverUge8();
 
+        opgaverUge9();
     }
 
     private static void opgaverUge6() {
@@ -92,5 +94,21 @@ public class Main {
         p.setLength(100000001);
         permutation = p.generatePermutation();
         System.out.println(mergeSort.calculateTime(permutation, "Random", permutation.size()));
+    }
+
+    public static void opgaverUge9() {
+        System.out.println("\nOpgaver_Uge_9: ");
+        PermutationGenerator p = new PermutationGenerator(16);
+        ArrayList<Integer> permutation = p.generateShuffledPermutation();
+
+        System.out.println(Arrays.toString(permutation.toArray()));
+
+        QuickSort quickSort = new QuickSort();
+        quickSort.sort(permutation);
+        System.out.println(Arrays.toString(permutation.toArray()));
+
+        p.setLength(100000001);
+        permutation = p.generatePermutation();
+        System.out.println(quickSort.calculateTime(permutation, "Random", permutation.size()));
     }
 }
