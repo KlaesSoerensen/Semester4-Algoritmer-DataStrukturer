@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Contracts/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Contracts/Sorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Execution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Execution/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_8/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_8/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_7/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_7/InsertionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Execution/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Execution/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +103,7 @@
       <workItem from="1708587615720" duration="6458000" />
       <workItem from="1708698778417" duration="1914000" />
       <workItem from="1709035840531" duration="2433000" />
+      <workItem from="1709110699871" duration="844000" />
     </task>
     <servers />
   </component>

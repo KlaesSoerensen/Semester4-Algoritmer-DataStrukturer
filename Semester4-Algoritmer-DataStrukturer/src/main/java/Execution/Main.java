@@ -89,6 +89,6 @@ public class Main {
         MergeSort mergeSort = new MergeSort();
         System.out.println(Arrays.toString(mergeSort.bottomUpMergeSort(permutation).toArray()));
 
-        mergeSort.calculateTime(p.generateShuffledPermutation(), "Random", Sorting.TESTING_ARRAY_LENGTH);
+        System.out.println(mergeSort.calculateTime(p.generateShuffledPermutation(), "Random", Long.MAX_VALUE));
     }
 }

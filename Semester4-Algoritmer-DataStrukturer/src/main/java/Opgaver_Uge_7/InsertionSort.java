@@ -34,7 +34,7 @@ public class InsertionSort implements Sorting {
     }
 
     @Override
-    public String calculateTime(ArrayList<Integer> array, String type, int length) {
+    public String calculateTime(ArrayList<Integer> array, String type, long length) {
         ArrayList<Integer> sorted;
 
         long startTime = System.currentTimeMillis();
