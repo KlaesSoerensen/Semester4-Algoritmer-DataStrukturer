@@ -20,7 +20,7 @@ public class Main {
 
         opgaverUge7();
 
-        mergeSort();
+        opgaverUge8();
 
     }
 
@@ -79,14 +79,16 @@ public class Main {
         System.out.println(insertionSort.calculateTime(worstCase, "Worst case", 100000));
     }
 
-    public static void mergeSort() {
-        System.out.println("\nMerge Sort:");
-        PermutationGenerator p = new PermutationGenerator(10);
+    public static void opgaverUge8() {
+        System.out.println("\nOpgaver_Uge_7: ");
+        PermutationGenerator p = new PermutationGenerator(16);
         ArrayList<Integer> permutation = p.generateShuffledPermutation();
 
         System.out.println(Arrays.toString(permutation.toArray()));
 
         MergeSort mergeSort = new MergeSort();
-        Arrays.toString(mergeSort.bottomUpMergeSort(permutation).toArray());
+        System.out.println(Arrays.toString(mergeSort.bottomUpMergeSort(permutation).toArray()));
+
+        mergeSort.calculateTime(p.generateShuffledPermutation(), "Random", Sorting.TESTING_ARRAY_LENGTH);
     }
 }

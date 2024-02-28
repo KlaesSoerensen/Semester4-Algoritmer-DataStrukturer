@@ -1,12 +1,14 @@
 package Opgaver_Uge_8;
 
+import Contracts.Sorting;
 import Opgaver_Uge_7.InsertionSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class MergeSort {
+public class MergeSort implements Sorting {
 
     public MergeSort() {
 
@@ -61,7 +63,7 @@ public class MergeSort {
     }
 
     // Implementation of In-Place Merge Sort algorithm for ArrayList
-    public List<Integer> bottomUpMergeSort(ArrayList<Integer> list) {
+    public ArrayList<Integer> bottomUpMergeSort(ArrayList<Integer> list) {
         int n = list.size();
         for (int size = 1; size < n; size *= 2) {
             for (int left = 0; left < n - size; left += 2 * size) {
@@ -105,6 +107,25 @@ public class MergeSort {
         while (j < n2) {
             list.set(k++, rightList.get(j++));
         }
+    }
+
+    @Override
+    public String calculateTime(ArrayList<Integer> array, String type, long length) {
+        ArrayList<Integer> sorted;
+
+        long startTime = System.currentTimeMillis();
+        sorted = this.bottomUpMergeSort(array);
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+
+        String className = this.getClass().getSimpleName();
+        String toPrint = String.format("%02d min, %02d sec",
+                TimeUnit.MILLISECONDS.toMinutes(totalTime),
+                TimeUnit.MILLISECONDS.toSeconds(totalTime) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(totalTime))
+        );
+
+        return (className + " of size " + length + " and of type " + type + " took: " + toPrint + " - " + totalTime + " milliseconds.");
     }
 
 }
