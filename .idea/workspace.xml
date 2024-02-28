@@ -29,7 +29,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Opgaver-Uge-9",
+    "git-widget-placeholder": "Algorithm-Comparison-Script",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Github/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer",
     "node.js.detected.package.eslint": "true",
@@ -73,6 +73,7 @@
       <workItem from="1709110619764" duration="78000" />
       <workItem from="1709132237340" duration="12000" />
       <workItem from="1709132889195" duration="9000" />
+      <workItem from="1709137845851" duration="141000" />
     </task>
     <servers />
   </component>

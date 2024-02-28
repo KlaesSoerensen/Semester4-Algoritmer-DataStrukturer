@@ -1,6 +1,7 @@
 package Execution;
 
 import Contracts.Sorting;
+import ExamTools.AlgorithmComparison;
 import Opgaver_Uge_6.CycleCounter;
 import Opgaver_Uge_6.PermutationGenerator;
 import Opgaver_Uge_7.BinarySearch;
@@ -17,13 +18,15 @@ import static java.lang.String.*;
 
 public class Main {
     public static void main(String[] args) {
-        opgaverUge6();
+        // opgaverUge6();
 
-        opgaverUge7();
+        // opgaverUge7();
 
-        opgaverUge8();
+        // opgaverUge8();
 
-        opgaverUge9();
+        // opgaverUge9();
+
+        testTools();
     }
 
     private static void opgaverUge6() {
@@ -110,5 +113,10 @@ public class Main {
         p.setLength(100000001);
         permutation = p.generatePermutation();
         System.out.println(quickSort.calculateTime(permutation, "Random", permutation.size()));
+    }
+
+    public static void testTools() {
+        AlgorithmComparison algorithmComparison = new AlgorithmComparison();
+        algorithmComparison.compare("1 +2 * 4", "1 + 2 * 5", 10);
     }
 }
