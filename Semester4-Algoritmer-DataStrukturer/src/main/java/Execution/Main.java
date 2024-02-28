@@ -80,7 +80,7 @@ public class Main {
     }
 
     public static void opgaverUge8() {
-        System.out.println("\nOpgaver_Uge_7: ");
+        System.out.println("\nOpgaver_Uge_8: ");
         PermutationGenerator p = new PermutationGenerator(16);
         ArrayList<Integer> permutation = p.generateShuffledPermutation();
 
@@ -89,6 +89,8 @@ public class Main {
         MergeSort mergeSort = new MergeSort();
         System.out.println(Arrays.toString(mergeSort.bottomUpMergeSort(permutation).toArray()));
 
-        System.out.println(mergeSort.calculateTime(p.generateShuffledPermutation(), "Random", Long.MAX_VALUE));
+        p.setLength(100000001);
+        permutation = p.generatePermutation();
+        System.out.println(mergeSort.calculateTime(permutation, "Random", permutation.size()));
     }
 }
