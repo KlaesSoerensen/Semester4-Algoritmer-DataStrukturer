@@ -1,7 +1,10 @@
 package ExamTools;
 
+import Execution.Main;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+
+import java.util.ArrayList;
 
 /*
 Explanation of Relationships between Time Complexities:
@@ -29,18 +32,73 @@ public class AlgorithmComparison {
 
     }
 
-    public String compare(String fn, String gn, long loops) {
+    public String compare(String fn, String gn) {
+        String functionF = fn.replaceAll(" ", "");
+        String functionG = gn.replaceAll(" ", "");
 
-        for (int i = 0; i < loops; i++) {
-            Expression expression = new ExpressionBuilder(fn.replace("n", "" + i)
-                    + "/"
-                    + gn.replace("n", "" + i)).build();
+        int n = 100000;
+        ArrayList<Double> results = new ArrayList<>();
 
-            System.out.println(expression.evaluate());
+
+        for (int i = n; i < n * 100; i += n) {
+            Expression expression = new ExpressionBuilder("(" + functionF.replace("n", "" + i)
+                    + ")/("
+                    + functionG.replace("n", "" + i) + ")").build();
+
+            results.add(expression.evaluate());
         }
 
-
-        return null;
+        return analyzeRatios(results);
     }
 
+    private String analyzeRatios(ArrayList<Double> results) {
+        // Analyze the ratios and classify the relationship
+
+        if (approachesInfinitely(results)) {
+            return "Tends to infinity: lim(n → ∞) (f(n) / g(n)) = ∞ implies f(n) = Ω(g(n)";
+        } else if (approachesConstant(results)) {
+            return "Tends to a constant: lim(n → ∞) (f(n) / g(n)) = c (where c is a constant) implies f(n) = Θ(g(n))";
+        } else if (approachesZero(results)) {
+            return "Tends to zero: lim(n → ∞) (f(n) / g(n)) = 0 implies f(n) = O(g(n))";
+        } else {
+            return "Unable to determine the relationship.";
+        }
+    }
+
+    private boolean approachesInfinitely(ArrayList<Double> results) {
+        for (int i = 0; i + 2 < results.size(); i++) {
+            boolean grows = results.get(i + 1) - results.get(i) < results.get(i + 2) - results.get(i + 1);
+
+            if (!grows) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean approachesZero(ArrayList<Double> results) {
+        for (int i = 0; i + 1 < results.size(); i++) {
+            if (results.get(i) > results.get(i + 1) && results.get(results.size() - 1) > 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean approachesConstant(ArrayList<Double> results) {
+        double constant = results.get(results.size() - 1);
+
+        for (int i = 0; i + 2 < results.size(); i++) {
+            boolean isLess = Math.abs(results.get(i) - results.get(i + 1)) > Math.abs(results.get(i + 1) - results.get(i + 2));
+            boolean approachesConstant = constant
+
+            if (!isLess || results.get(results.size() - 1) < 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
