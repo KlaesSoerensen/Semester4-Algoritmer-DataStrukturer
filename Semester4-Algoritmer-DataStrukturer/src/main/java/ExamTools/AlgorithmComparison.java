@@ -4,6 +4,7 @@ import Execution.Main;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /*
@@ -79,7 +80,9 @@ public class AlgorithmComparison {
 
     private boolean approachesZero(ArrayList<Double> results) {
         for (int i = 0; i + 1 < results.size(); i++) {
-            if (results.get(i) > results.get(i + 1) && results.get(results.size() - 1) > 0) {
+            boolean approachesZero = Math.abs(0 - results.get(i)) > Math.abs(0 - results.get(i + 1));
+
+            if (results.get(i) > results.get(i + 1) && !approachesZero && results.get(results.size() - 1) > 0) {
                 return false;
             }
         }
@@ -88,13 +91,13 @@ public class AlgorithmComparison {
     }
 
     private boolean approachesConstant(ArrayList<Double> results) {
-        double constant = results.get(results.size() - 1);
+        BigDecimal constant = BigDecimal.valueOf(results.get(results.size() - 1));
 
         for (int i = 0; i + 2 < results.size(); i++) {
             boolean isLess = Math.abs(results.get(i) - results.get(i + 1)) > Math.abs(results.get(i + 1) - results.get(i + 2));
-            boolean approachesConstant = constant
+            boolean approachesConstant = Math.abs(constant - results.get(i)) > Math.abs(constant - results.get(i + 1));
 
-            if (!isLess || results.get(results.size() - 1) < 0) {
+            if (!isLess || !approachesConstant || results.get(results.size() - 1) < 0) {
                 return false;
             }
         }
