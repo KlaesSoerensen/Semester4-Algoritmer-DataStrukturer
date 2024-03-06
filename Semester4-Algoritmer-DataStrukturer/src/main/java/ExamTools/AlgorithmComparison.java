@@ -6,6 +6,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
 Explanation of Relationships between Time Complexities:
@@ -37,17 +38,24 @@ public class AlgorithmComparison {
         String functionF = fn.replaceAll(" ", "");
         String functionG = gn.replaceAll(" ", "");
 
-        int n = 100000;
+        int n = 10;
         ArrayList<Double> results = new ArrayList<>();
 
 
         for (int i = n; i < n * 100; i += n) {
-            Expression expression = new ExpressionBuilder("(" + functionF.replace("n", "" + i)
+            String stringExpression = "(" + functionF.replace("n", "" + i)
                     + ")/("
-                    + functionG.replace("n", "" + i) + ")").build();
+                    + functionG.replace("n", "" + i) + ")";
+            Expression expression = new ExpressionBuilder(stringExpression).build();
 
-            results.add(expression.evaluate());
+            Expression test = new ExpressionBuilder(functionF.replace("n", "" + i)).build();
+            Expression test2 = new ExpressionBuilder(functionG.replace("n", "" + i)).build();
+            System.out.println(test2.evaluate());
+            // System.out.println(stringExpression);
+            results.add(test.evaluate() / test2.evaluate());
         }
+
+        System.out.println(Arrays.toString(results.toArray()));
 
         return analyzeRatios(results);
     }
@@ -68,9 +76,10 @@ public class AlgorithmComparison {
 
     private boolean approachesInfinitely(ArrayList<Double> results) {
         for (int i = 0; i + 2 < results.size(); i++) {
-            boolean grows = results.get(i + 1) - results.get(i) < results.get(i + 2) - results.get(i + 1);
+            boolean grows = results.get(i) < results.get(i + 1);
+            boolean accelerates = results.get(i + 1) - results.get(i) < results.get(i + 2) - results.get(i + 1);
 
-            if (!grows) {
+            if (!grows || !accelerates) {
                 return false;
             }
         }
@@ -91,11 +100,11 @@ public class AlgorithmComparison {
     }
 
     private boolean approachesConstant(ArrayList<Double> results) {
-        BigDecimal constant = BigDecimal.valueOf(results.get(results.size() - 1));
+        double constant = results.get(results.size() - 1);
 
         for (int i = 0; i + 2 < results.size(); i++) {
             boolean isLess = Math.abs(results.get(i) - results.get(i + 1)) > Math.abs(results.get(i + 1) - results.get(i + 2));
-            boolean approachesConstant = Math.abs(constant - results.get(i)) > Math.abs(constant - results.get(i + 1));
+            boolean approachesConstant = Math.abs(constant - results.get(i)) > Math.abs(constant -results.get(i + 1));
 
             if (!isLess || !approachesConstant || results.get(results.size() - 1) < 0) {
                 return false;

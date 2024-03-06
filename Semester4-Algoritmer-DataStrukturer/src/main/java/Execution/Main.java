@@ -117,7 +117,7 @@ public class Main {
 
     public static void testTools() {
         AlgorithmComparison algorithmComparison = new AlgorithmComparison();
-        System.out.println(algorithmComparison.compare("n^2", "n^3"));
+        System.out.println(algorithmComparison.compare("n^3", "n^2"));
         System.out.println(algorithmComparison.compare("n^3 + n", "n^3"));
         System.out.println(algorithmComparison.compare("n^3", "n^2"));
     }
