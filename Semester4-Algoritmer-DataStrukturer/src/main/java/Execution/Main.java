@@ -2,6 +2,7 @@ package Execution;
 
 import Contracts.Sorting;
 import ExamTools.AlgorithmComparison;
+import Opgaver_Uge_10.HeapSort;
 import Opgaver_Uge_6.CycleCounter;
 import Opgaver_Uge_6.PermutationGenerator;
 import Opgaver_Uge_7.BinarySearch;
@@ -25,6 +26,8 @@ public class Main {
         // opgaverUge8();
 
         // opgaverUge9();
+
+        opgaverUge10();
 
         testTools();
     }
@@ -113,6 +116,22 @@ public class Main {
         p.setLength(100000001);
         permutation = p.generatePermutation();
         System.out.println(quickSort.calculateTime(permutation, "Random", permutation.size()));
+    }
+
+    public static void opgaverUge10() {
+        System.out.println("\nOpgaver_Uge_10: ");
+        PermutationGenerator p = new PermutationGenerator(16);
+        ArrayList<Integer> permutation = p.generateShuffledPermutation();
+
+        System.out.println(Arrays.toString(permutation.toArray()));
+
+        HeapSort heapSort = new HeapSort();
+        heapSort.sort(permutation);
+        System.out.println(Arrays.toString(permutation.toArray()));
+
+        p.setLength(100000001);
+        permutation = p.generatePermutation();
+        System.out.println(heapSort.calculateTime(permutation, "Random", permutation.size()));
     }
 
     public static void testTools() {
