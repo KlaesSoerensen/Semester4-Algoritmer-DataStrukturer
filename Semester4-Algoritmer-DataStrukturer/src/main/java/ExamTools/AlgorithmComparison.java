@@ -1,10 +1,7 @@
 package ExamTools;
 
-import Execution.Main;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
-
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -30,6 +27,7 @@ of the algorithm in the denominator.
 */
 
 public class AlgorithmComparison {
+    public static final String[] standardGrowthFunctions= {"1", "log(n)", "sqrt(n)", "n", "n*log(n)", "n*sqrt(n)", "n^2", "n^3", "n^10", "2^n"};
     public AlgorithmComparison() {
 
     }
@@ -38,7 +36,7 @@ public class AlgorithmComparison {
         String functionF = fn.replaceAll(" ", "");
         String functionG = gn.replaceAll(" ", "");
 
-        int n = 10;
+        int n = 1000;
         ArrayList<Double> results = new ArrayList<>();
 
 
@@ -47,15 +45,8 @@ public class AlgorithmComparison {
                     + ")/("
                     + functionG.replace("n", "" + i) + ")";
             Expression expression = new ExpressionBuilder(stringExpression).build();
-
-            Expression test = new ExpressionBuilder(functionF.replace("n", "" + i)).build();
-            Expression test2 = new ExpressionBuilder(functionG.replace("n", "" + i)).build();
-            System.out.println(test2.evaluate());
-            // System.out.println(stringExpression);
-            results.add(test.evaluate() / test2.evaluate());
+            results.add(expression.evaluate());
         }
-
-        System.out.println(Arrays.toString(results.toArray()));
 
         return analyzeRatios(results);
     }
@@ -65,21 +56,25 @@ public class AlgorithmComparison {
 
         if (approachesInfinitely(results)) {
             return "Tends to infinity: lim(n → ∞) (f(n) / g(n)) = ∞ implies f(n) = Ω(g(n)";
-        } else if (approachesConstant(results)) {
-            return "Tends to a constant: lim(n → ∞) (f(n) / g(n)) = c (where c is a constant) implies f(n) = Θ(g(n))";
         } else if (approachesZero(results)) {
             return "Tends to zero: lim(n → ∞) (f(n) / g(n)) = 0 implies f(n) = O(g(n))";
+        } else if (approachesConstant(results)) {
+            return "Tends to a constant: lim(n → ∞) (f(n) / g(n)) = c (where c is a constant) implies f(n) = Θ(g(n))";
         } else {
-            return "Unable to determine the relationship.";
+            return "Unable to determine the relationship. Values may have overflowed.";
         }
     }
 
     private boolean approachesInfinitely(ArrayList<Double> results) {
         for (int i = 0; i + 2 < results.size(); i++) {
             boolean grows = results.get(i) < results.get(i + 1);
-            boolean accelerates = results.get(i + 1) - results.get(i) < results.get(i + 2) - results.get(i + 1);
+            boolean decelerates = results.get(i + 1) - results.get(i) > results.get(i + 2) - results.get(i + 1);
 
-            if (!grows || !accelerates) {
+            if (results.get(i).isInfinite() || results.get(i).isNaN()) {
+                return true;
+            }
+
+            if (!grows || decelerates) {
                 return false;
             }
         }
@@ -89,9 +84,16 @@ public class AlgorithmComparison {
 
     private boolean approachesZero(ArrayList<Double> results) {
         for (int i = 0; i + 1 < results.size(); i++) {
-            boolean approachesZero = Math.abs(0 - results.get(i)) > Math.abs(0 - results.get(i + 1));
+            boolean decreases = results.get(i) > results.get(i + 1);
+            boolean isGreaterThanZero = results.get(results.size() - 1) > 0;
+            boolean slopeIsNegative = 0 > results.get(i + 1) - results.get(i);
+            boolean isLessThanOne = results.get(results.size() - 1) < 1;
 
-            if (results.get(i) > results.get(i + 1) && !approachesZero && results.get(results.size() - 1) > 0) {
+            if (results.get(i).isInfinite() || results.get(i).isNaN()) {
+                return true;
+            }
+
+            if (!decreases || !isGreaterThanZero || !slopeIsNegative || !isLessThanOne) {
                 return false;
             }
         }
@@ -102,15 +104,44 @@ public class AlgorithmComparison {
     private boolean approachesConstant(ArrayList<Double> results) {
         double constant = results.get(results.size() - 1);
 
-        for (int i = 0; i + 2 < results.size(); i++) {
-            boolean isLess = Math.abs(results.get(i) - results.get(i + 1)) > Math.abs(results.get(i + 1) - results.get(i + 2));
-            boolean approachesConstant = Math.abs(constant - results.get(i)) > Math.abs(constant -results.get(i + 1));
+        if (results.get(results.size() - 1).equals(1.0)) {
+            return true;
+        }
 
-            if (!isLess || !approachesConstant || results.get(results.size() - 1) < 0) {
+        for (int i = 0; i + 2 < results.size(); i++) {
+            boolean isGreaterThanOne = results.get(results.size() - 1) >= 1;
+            boolean approachesConstant = Math.abs(constant - results.get(i)) >  Math.abs(constant - results.get(i + 1));
+
+            if (results.get(i).isInfinite() || results.get(i).isNaN()) {
+                return true;
+            }
+
+            if (!isGreaterThanOne || !approachesConstant) {
                 return false;
             }
         }
 
         return true;
     }
+
+    public String compareToAll(String fn) {
+        StringBuilder product = new StringBuilder();
+
+        // Calculate the maximum length of the left-hand side
+        int maxLeftLength = 0;
+        for (String function : standardGrowthFunctions) {
+            int leftLength = (fn + " : " + function).length();
+            maxLeftLength = Math.max(maxLeftLength, leftLength);
+        }
+
+        // Build the comparison strings with aligned arrows
+        for (String function : standardGrowthFunctions) {
+            String comparison = this.compare(fn, function);
+            String arrowPadding = " ".repeat(maxLeftLength - (fn + " : " + function).length());
+            product.append(fn).append(" : ").append(function).append(arrowPadding).append(" ---> ").append(comparison).append("\n");
+        }
+
+        return product.toString();
+    }
+
 }

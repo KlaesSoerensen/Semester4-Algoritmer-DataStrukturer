@@ -119,6 +119,10 @@ public class Main {
         AlgorithmComparison algorithmComparison = new AlgorithmComparison();
         System.out.println(algorithmComparison.compare("n^3", "n^2"));
         System.out.println(algorithmComparison.compare("n^3 + n", "n^3"));
-        System.out.println(algorithmComparison.compare("n^3", "n^2"));
+        System.out.println(algorithmComparison.compare("n^2", "n^3"));
+
+        System.out.println("\nCompare to all:");
+        System.out.println(algorithmComparison.compareToAll("n^3"));
+        System.out.println(algorithmComparison.compareToAll("n * log(n)"));
     }
 }
