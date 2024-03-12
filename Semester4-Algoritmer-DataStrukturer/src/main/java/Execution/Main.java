@@ -9,6 +9,7 @@ import Opgaver_Uge_7.BinarySearch;
 import Opgaver_Uge_7.InsertionSort;
 import Opgaver_Uge_8.MergeSort;
 import Opgaver_Uge_9.QuickSort;
+import Opgaver_uge_11.RedBlackTree;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,6 +29,8 @@ public class Main {
         // opgaverUge9();
 
         opgaverUge10();
+
+        opgaverUge11();
 
         testTools();
     }
@@ -129,9 +132,19 @@ public class Main {
         heapSort.sort(permutation);
         System.out.println(Arrays.toString(permutation.toArray()));
 
-        p.setLength(100000001);
-        permutation = p.generatePermutation();
+        p.setLength(10000001);
+        permutation = p.generateShuffledPermutation();
         System.out.println(heapSort.calculateTime(permutation, "Random", permutation.size()));
+    }
+
+    public static void opgaverUge11() {
+        System.out.println("\nOpgaver_Uge_11: ");
+        PermutationGenerator p = new PermutationGenerator(10000001);
+        ArrayList<Integer> permutation = p.generateShuffledPermutation();
+
+        RedBlackTree redBlackTree = new RedBlackTree();
+        redBlackTree.insertAll(permutation);
+        System.out.println(redBlackTree.calculateTime(permutation, "Random", permutation.size()));
     }
 
     public static void testTools() {

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d39d9f8-204e-46d7-9b91-da09895a834f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Semester4-Algoritmer-DataStrukturer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Semester4-Algoritmer-DataStrukturer/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2d39d9f8-204e-46d7-9b91-da09895a834f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +29,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Opgaver__Uge__10",
+    "git-widget-placeholder": "Opgaver__Uge__11",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Github/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer",
     "node.js.detected.package.eslint": "true",
@@ -81,6 +79,7 @@
       <workItem from="1709659153946" duration="50000" />
       <workItem from="1709738366378" duration="5000" />
       <workItem from="1709759865512" duration="6000" />
+      <workItem from="1710269279164" duration="281000" />
     </task>
     <servers />
   </component>
