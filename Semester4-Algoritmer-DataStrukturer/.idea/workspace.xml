@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e765a0d1-0bcd-4b8b-8045-1f3ab1df1ea5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Opgaver_Uge_10/HeapSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Execution/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Execution/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Opgaver__Uge__10",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Github/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer",
@@ -103,7 +100,7 @@
       <workItem from="1709388344251" duration="1564000" />
       <workItem from="1709659206864" duration="4183000" />
       <workItem from="1709738373792" duration="8322000" />
-      <workItem from="1709759872088" duration="406000" />
+      <workItem from="1709759872088" duration="1606000" />
     </task>
     <servers />
   </component>
