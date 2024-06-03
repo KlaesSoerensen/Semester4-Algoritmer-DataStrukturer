@@ -29,7 +29,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Opgaver__Uge__11",
+    "git-widget-placeholder": "Opgaver__uge__12",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Github/Semester4-Algoritmer-DataStrukturer/Semester4-Algoritmer-DataStrukturer",
     "node.js.detected.package.eslint": "true",
@@ -80,6 +80,7 @@
       <workItem from="1709738366378" duration="5000" />
       <workItem from="1709759865512" duration="6000" />
       <workItem from="1710269279164" duration="281000" />
+      <workItem from="1711290464530" duration="607000" />
     </task>
     <servers />
   </component>

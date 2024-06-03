@@ -9,6 +9,7 @@ import Opgaver_Uge_7.BinarySearch;
 import Opgaver_Uge_7.InsertionSort;
 import Opgaver_Uge_8.MergeSort;
 import Opgaver_Uge_9.QuickSort;
+import Opgaver_uge_11.CountingSort;
 import Opgaver_uge_11.RedBlackTree;
 
 import java.util.ArrayList;
@@ -28,9 +29,11 @@ public class Main {
 
         // opgaverUge9();
 
-        opgaverUge10();
+        // opgaverUge10();
 
-        opgaverUge11();
+        // opgaverUge11();
+
+        opgaverUge12();
 
         testTools();
     }
@@ -147,7 +150,24 @@ public class Main {
         System.out.println(redBlackTree.calculateTime(permutation, "Random", permutation.size()));
     }
 
+    public static void opgaverUge12() {
+        System.out.println("\nOpgaver_Uge_12: ");
+        CountingSort countingSort = new CountingSort();
+        PermutationGenerator p = new PermutationGenerator(16);
+        ArrayList<Integer> permutation = p.generateShuffledPermutation();
+
+        System.out.println(Arrays.toString(permutation.toArray()));
+        System.out.println(Arrays.toString(countingSort.sort(permutation).toArray()));
+
+        p.setLength(1000000 1);
+        permutation = p.generateShuffledPermutation();
+
+        System.out.println(countingSort.calculateTime(permutation, "Random", permutation.size()));
+    }
+
+
     public static void testTools() {
+        System.out.println("\nTest of tools:");
         AlgorithmComparison algorithmComparison = new AlgorithmComparison();
         System.out.println(algorithmComparison.compare("n^3", "n^2"));
         System.out.println(algorithmComparison.compare("n^3 + n", "n^3"));
